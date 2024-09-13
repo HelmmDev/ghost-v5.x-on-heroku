@@ -1,0 +1,17 @@
+{{!< default_post}}
+{{>klaviyo_initiate}}
+{{#tag}}
+{{#contentFor "background_cover"}}
+{{>images/background_cover background_cover=feature_image}}
+{{/contentFor}}
+<div class="archive-section">
+	<h1 class="global-title-large">{{name}}</h1>
+	<span class="archive-counter">{{plural ../pagination.total empty=(t "No posts") singular=(t "1 post") plural=(t "% posts")}}</span>
+	{{#if description}}
+	<p class="archive-description">{{description}}</p>
+	{{/if}}
+{{>breadcrumb_tag_json}}
+</div>
+{{/tag}}
+{{>loop_tag}}
+{{pagination}}

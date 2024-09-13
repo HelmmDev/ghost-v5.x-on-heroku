@@ -1,0 +1,174 @@
+{{!--new section1 --}}
+{{#match @custom.tag_for_special_section1}}
+<div class="special-section">
+	<div class="global-title-wrap">
+		<h3 class="global-title-medium">{{{t "Explore {start-italic}{custom_tag}{end-italic}" start-italic="<span>" end-italic="</span>" custom_tag=@custom.tag_for_special_section1}}}</h3>
+		<a href="https://www.helmm.com/lifeathelmm/{{@custom.tag_for_special_section1}}/" aria-label="Link to the collection">{{>icons/site/arrow_right}}</a>
+	</div>
+	<div class="special-wrap">
+		{{#get "posts" limit="4" filter="tag:[{{@custom.tag_for_special_section1}}]" include="authors,tags"}}
+		{{#foreach posts}}
+		{{>item section_item=true show_tags=true}}
+		{{/foreach}}
+		{{/get}}
+	</div>
+</div>
+{{else}}
+{{#foreach posts limit="1"}}
+{{#if primary_tag}}
+<div class="special-section">
+	<div class="global-title-wrap">
+		<h3 class="global-title-medium">{{{t "Explore {start-italic}{custom_tag}{end-italic}" start-italic="<span>" end-italic="</span>" custom_tag=primary_tag.name}}}</h3>
+		<a href="{{#primary_tag}}{{url}}{{/primary_tag}}" aria-label="Link to the collection">{{>icons/site/arrow_right}}</a>
+	</div>
+	<div class="special-wrap">
+		{{#get "posts" limit="4" filter="tag:{{primary_tag.slug}}+id:-{{id}}" include="authors,tags"}}
+		{{#foreach posts}}
+		{{>item section_item=true show_tags=true}}
+		{{/foreach}}
+		{{/get}}
+	</div>
+</div>
+{{/if}}
+{{/foreach}}
+{{/match}}
+
+{{!--new section2 --}}
+{{#match @custom.tag_for_special_section2}}
+<div class="special-section">
+	<div class="global-title-wrap">
+		<h3 class="global-title-medium">{{{t "Explore {start-italic}{custom_tag}{end-italic}" start-italic="<span>" end-italic="</span>" custom_tag=@custom.tag_for_special_section2}}}</h3>
+		<a href="https://www.helmm.com/lifeathelmm/{{@custom.tag_for_special_section2}}/" aria-label="Link to the collection">{{>icons/site/arrow_right}}</a>
+	</div>
+	<div class="special-wrap">
+		{{#get "posts" limit="4" filter="tag:[{{@custom.tag_for_special_section2}}]" include="authors,tags"}}
+		{{#foreach posts}}
+		{{>item section_item=true show_tags=true}}
+		{{/foreach}}
+		{{/get}}
+	</div>
+</div>
+{{else}}
+{{#foreach posts limit="1"}}
+{{#if primary_tag}}
+<div class="special-section">
+	<div class="global-title-wrap">
+		<h3 class="global-title-medium">{{{t "Explore {start-italic}{custom_tag}{end-italic}" start-italic="<span>" end-italic="</span>" custom_tag=primary_tag.name}}}</h3>
+		<a href="{{#primary_tag}}{{url}}{{/primary_tag}}" aria-label="Link to the collection">{{>icons/site/arrow_right}}</a>
+	</div>
+	<div class="special-wrap">
+		{{#get "posts" limit="4" filter="tag:{{primary_tag.slug}}+id:-{{id}}" include="authors,tags"}}
+		{{#foreach posts}}
+		{{>item section_item=true show_tags=true}}
+		{{/foreach}}
+		{{/get}}
+	</div>
+</div>
+{{/if}}
+{{/foreach}}
+{{/match}}
+
+{{!--new section3 --}}
+{{#match @custom.tag_for_special_section3}}
+<div class="special-section">
+	<div class="global-title-wrap">
+		<h3 class="global-title-medium">{{{t "Explore {start-italic}{custom_tag}{end-italic}" start-italic="<span>" end-italic="</span>" custom_tag=@custom.tag_for_special_section3}}}</h3>
+		<a href="https://www.helmm.com/lifeathelmm/{{@custom.tag_for_special_section3}}/" aria-label="Link to the collection">{{>icons/site/arrow_right}}</a>
+	</div>
+	<div class="special-wrap">
+		{{#get "posts" limit="4" filter="tag:[{{@custom.tag_for_special_section3}}]" include="authors,tags"}}
+		{{#foreach posts}}
+		{{>item section_item=true show_tags=true}}
+		{{/foreach}}
+		{{/get}}
+	</div>
+</div>
+{{else}}
+{{#foreach posts limit="1"}}
+{{#if primary_tag}}
+<div class="special-section">
+	<div class="global-title-wrap">
+		<h3 class="global-title-medium">{{{t "Explore {start-italic}{custom_tag}{end-italic}" start-italic="<span>" end-italic="</span>" custom_tag=primary_tag.name}}}</h3>
+		<a href="{{#primary_tag}}{{url}}{{/primary_tag}}" aria-label="Link to the collection">{{>icons/site/arrow_right}}</a>
+	</div>
+	<div class="special-wrap">
+		{{#get "posts" limit="4" filter="tag:{{primary_tag.slug}}+id:-{{id}}" include="authors,tags"}}
+		{{#foreach posts}}
+		{{>item section_item=true show_tags=true}}
+		{{/foreach}}
+		{{/get}}
+	</div>
+</div>
+{{/if}}
+{{/foreach}}
+{{/match}}
+
+{{!--new section4 --}}
+{{#match @custom.tag_for_special_section4}}
+<div class="special-section">
+	<div class="global-title-wrap">
+		<h3 class="global-title-medium">{{{t "Explore {start-italic}{custom_tag}{end-italic}" start-italic="<span>" end-italic="</span>" custom_tag=@custom.tag_for_special_section4}}}</h3>
+		<a href="https://www.helmm.com/lifeathelmm/{{@custom.tag_for_special_section4}}/" aria-label="Link to the collection">{{>icons/site/arrow_right}}</a>
+	</div>
+	<div class="special-wrap">
+		{{#get "posts" limit="4" filter="tag:[{{@custom.tag_for_special_section4}}]" include="authors,tags"}}
+		{{#foreach posts}}
+		{{>item section_item=true show_tags=true}}
+		{{/foreach}}
+		{{/get}}
+	</div>
+</div>
+{{else}}
+{{#foreach posts limit="1"}}
+{{#if primary_tag}}
+<div class="special-section">
+	<div class="global-title-wrap">
+		<h3 class="global-title-medium">{{{t "Explore {start-italic}{custom_tag}{end-italic}" start-italic="<span>" end-italic="</span>" custom_tag=primary_tag.name}}}</h3>
+		<a href="{{#primary_tag}}{{url}}{{/primary_tag}}" aria-label="Link to the collection">{{>icons/site/arrow_right}}</a>
+	</div>
+	<div class="special-wrap">
+		{{#get "posts" limit="4" filter="tag:{{primary_tag.slug}}+id:-{{id}}" include="authors,tags"}}
+		{{#foreach posts}}
+		{{>item section_item=true show_tags=true}}
+		{{/foreach}}
+		{{/get}}
+	</div>
+</div>
+{{/if}}
+{{/foreach}}
+{{/match}}
+
+{{!--new section5 --}}
+{{#match @custom.tag_for_special_section5}}
+<div class="special-section">
+	<div class="global-title-wrap">
+		<h3 class="global-title-medium">{{{t "Explore {start-italic}{custom_tag}{end-italic}" start-italic="<span>" end-italic="</span>" custom_tag=@custom.tag_for_special_section5}}}</h3>
+		<a href="https://www.helmm.com/lifeathelmm/{{@custom.tag_for_special_section5}}/" aria-label="Link to the collection">{{>icons/site/arrow_right}}</a>
+	</div>
+	<div class="special-wrap">
+		{{#get "posts" limit="4" filter="tag:[{{@custom.tag_for_special_section5}}]" include="authors,tags"}}
+		{{#foreach posts}}
+		{{>item section_item=true show_tags=true}}
+		{{/foreach}}
+		{{/get}}
+	</div>
+</div>
+{{else}}
+{{#foreach posts limit="1"}}
+{{#if primary_tag}}
+<div class="special-section">
+	<div class="global-title-wrap">
+		<h3 class="global-title-medium">{{{t "Explore {start-italic}{custom_tag}{end-italic}" start-italic="<span>" end-italic="</span>" custom_tag=primary_tag.name}}}</h3>
+		<a href="{{#primary_tag}}{{url}}{{/primary_tag}}" aria-label="Link to the collection">{{>icons/site/arrow_right}}</a>
+	</div>
+	<div class="special-wrap">
+		{{#get "posts" limit="4" filter="tag:{{primary_tag.slug}}+id:-{{id}}" include="authors,tags"}}
+		{{#foreach posts}}
+		{{>item section_item=true show_tags=true}}
+		{{/foreach}}
+		{{/get}}
+	</div>
+</div>
+{{/if}}
+{{/foreach}}
+{{/match}}

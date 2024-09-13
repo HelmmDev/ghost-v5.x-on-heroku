@@ -1,0 +1,14 @@
+<div class="hero-section">
+	<div class="hero-wrap">
+		<h1 class="hero-title global-title-huge global-title-offset">
+		{{#if @custom.hero_title_text}}
+			{{{@custom.hero_title_text}}}
+		{{else}}
+			{{{t "{start-italic}Thoughts, stories and ideas{end-italic} by the {site-title} team" start-italic="<span>" end-italic="</span>" site-title=@site.title}}}
+		{{/if}}
+		</h1>
+		{{#if @site.description}}
+			<p class="hero-description global-subtitle-excerpt">{{@site.description}}</p>
+		{{/if}}
+	</div>
+</div>

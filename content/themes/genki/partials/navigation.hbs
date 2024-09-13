@@ -1,0 +1,84 @@
+{{! Header navigation }}
+<div class="nav-menu-container">
+{{^if isSecondary}}
+<ul>
+	<li id="search-mobile" class="search-icon">
+		{{>search enabled_search=true}}
+	</li>
+	{{#foreach navigation to="5"}}
+	<li><a href="https://www.helmm.com/lifeathelmm{{url}}"{{#if current}} class="is-active"{{/if}}>{{label}}</a></li>
+	{{/foreach}}
+	{{#foreach navigation from="6"}}
+	{{#if @first}}
+	<li class="is-dropdown">
+		{{>icons/site/dots}}
+		<ul>
+			{{/if}}
+			<li><a href="https://www.helmm.com/lifeathelmm{{url}}"{{#if current}} class="is-active"{{/if}}>{{label}}</a></li>
+			{{#if @last}}
+		</ul>
+	</li>
+	{{/if}}
+	{{/foreach}}
+	<li id="search-desktop" class="search-icon">
+		{{>search enabled_search=true}}
+	</li>
+</ul>
+{{else}}
+</div>
+
+
+{{! Footer navigation }}
+
+{{#foreach navigation limit="3"}}
+{{#if @first}}
+<div class="footer-nav-column">
+	<small>{{t "Column 1"}}</small>
+	<ul>
+		{{/if}}
+		<li><a href="{{url absolute="true"}}">{{label}}</a></li>
+		{{#if @last}}
+	</ul>
+</div>
+{{/if}}
+{{/foreach}}
+
+{{#foreach navigation limit="3" from="4"}}
+{{#if @first}}
+<div class="footer-nav-column">
+	<small>{{t "Column 2"}}</small>
+	<ul>
+		{{/if}}
+		<li><a href="{{url absolute="true"}}">{{label}}</a></li>
+		{{#if @last}}
+	</ul>
+</div>
+{{/if}}
+{{/foreach}}
+
+{{#foreach navigation limit="3" from="7"}}
+{{#if @first}}
+<div class="footer-nav-column">
+	<small>{{t "Column 3"}}</small>
+	<ul>
+		{{/if}}
+		<li><a href="{{url absolute="true"}}">{{label}}</a></li>
+		{{#if @last}}
+	</ul>
+</div>
+{{/if}}
+{{/foreach}}
+
+{{#foreach navigation from="10"}}
+{{#if @first}}
+<div class="footer-nav-column">
+	<small>{{t "Column 4"}}</small>
+	<ul>
+		{{/if}}
+		<li><a href="{{url absolute="true"}}">{{label}}</a></li>
+		{{#if @last}}
+	</ul>
+</div>
+{{/if}}
+{{/foreach}}
+{{/if}}

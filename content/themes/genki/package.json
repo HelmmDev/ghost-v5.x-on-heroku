@@ -1,0 +1,81 @@
+{
+    "name": "genki",
+    "demo": "https://genki.fueko.net",
+    "version": "2.4.0",
+    "docs": "https://fueko.net/docs/genki/",
+    "author": {
+        "name": "fueko",
+        "email": "hello@fueko.net",
+        "url": "https://fueko.net"
+    },
+    "keywords": [
+        "ghost-theme"
+    ],
+    "config": {
+        "posts_per_page": 8,
+        "card_assets": {
+            "exclude": ["bookmark", "gallery", "blockquote"]
+        },
+        "image_sizes": {
+            "m": {
+                "width": 400
+            },
+            "l": {
+                "width": 800
+            },
+            "xl": {
+                "width": 1600
+            }
+        },
+        "custom": {
+            "color_scheme": {
+                "type": "select",
+                "options": ["Light", "Dark", "Sepia", "Auto: Light/Dark", "Auto: Sepia/Dark"],
+                "default": "Light"
+            },
+            "content_api_key_for_search": {
+                "type": "text"
+            },
+            "accent_color_buttons": {
+                "type": "boolean",
+                "default": true
+            },
+            "publication_cover_only_on_homepage": {
+                "type": "boolean",
+                "default": false
+            },
+            "contact_form_endpoint": {
+                "type": "text"
+            },
+            "tag_for_special_section1": {
+                "type": "text",
+                "group": "homepage",
+                "description": "Provide the tag slug you want to display in the section below the 'Load more' button"
+            },
+            "tag_for_special_section2": {
+                "type": "text",
+                "group": "homepage",
+                "description": "Provide the tag slug you want to display in the section below the 'Load more' button"
+            },
+            "tag_for_special_section3": {
+                "type": "text",
+                "group": "homepage",
+                "description": "Provide the tag slug you want to display in the section below the 'Load more' button"
+            },
+            "tag_for_special_section4": {
+                "type": "text",
+                "group": "homepage",
+                "description": "Provide the tag slug you want to display in the section below the 'Load more' button"
+            },
+            "tag_for_special_section5": {
+                "type": "text",
+                "group": "homepage",
+                "description": "Provide the tag slug you want to display in the section below the 'Load more' button"
+            },
+            "disqus_shortname": {
+                "type": "text",
+                "group": "post"
+            }
+        }
+    }
+}

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="{{@site.locale}}"{{#match @custom.color_scheme "Dark"}} class="dark-mode"{{/match}}{{#match @custom.color_scheme "Sepia"}} class="sepia-mode"{{/match}}{{#match @custom.color_scheme "Auto: Light/Dark"}} class="auto-dark-mode"{{/match}}{{#match @custom.color_scheme "Auto: Sepia/Dark"}} class="sepia-mode auto-dark-mode"{{/match}}>
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<title>{{meta_title page=(t "meta-page")}}</title>
+		<meta name="HandheldFriendly" content="True">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		{{>services/google_fonts}}
+		<link rel="stylesheet" type="text/css" href="{{asset "css/screen.css"}}">
+		{{#is "post,page,author,tag"}}
+		{{{block "background_cover_css"}}}
+		{{else if @site.cover_image}}
+		<style>.global-cover{background-image:url({{img_url @site.cover_image size="xl"}})}@media(max-width:480px){.global-cover{background-image:url({{img_url @site.cover_image size="l"}})}}</style>
+		{{/is}}
+		{{ghost_head}}
+	</head>
+
+	<body class="{{body_class}}{{#if @custom.publication_cover_only_on_homepage}} global-cover-homepage{{/if}}{{#if @custom.accent_color_buttons}} global-alternative-buttons{{/if}}">
+		{{#is "post,page,author,tag"}}
+		{{{block "background_cover"}}}
+		{{else}}
+		{{>images/background_cover background_cover=@site.cover_image}}
+		{{/is}}
+		{{>nav1}}
+		{{>blogtitle_post}}
+		<div class="global-wrap">
+			<div class="global-content">
+				{{>header}}
+				<main class="global-main">
+					{{{body}}}
+					{{>members/subscribe_form}}
+				</main>
+				{{>footer}}
+			</div>
+		</div>
+		{{>members/notifications}}
+		{{>search}}
+		<script src="{{asset "js/global.js"}}"></script>
+	
+		{{#if pagination.pages}}
+		<script src="{{asset "js/index.js"}}"></script>
+		{{/if}}
+		{{#is "post,page"}}
+		<script src="{{asset "js/post.js"}}"></script>
+		{{/is}}
+		{{{block "notifications_js"}}}
+		{{{block "search_js"}}}
+		{{{block "account_js"}}}
+		{{{block "membership_js"}}}
+		{{ghost_foot}}
+	</body>
+</html>

@@ -1,0 +1,49 @@
+{{^is "page"}}
+{{#if access}}
+<progress class="post-progress"></progress>
+{{/if}}
+{{/is}}
+
+<article class="post-section">
+	{{#match @page.show_title_and_feature_image}}
+	{{>post_header}}
+	{{else}}
+	{{#contentFor "background_cover"}}
+	{{#if add_background_image}}
+	{{>images/background_cover background_cover=feature_image}}
+	{{else}}
+	{{>images/background_cover background_cover=false}}
+	{{/if}}
+	{{/contentFor}}
+	{{/match}}
+	<div class="post-content">
+		{{#if access}}
+		{{content}}
+		{{^is "page"}}
+		{{>post_share}}
+		{{/is}}
+		{{else}}
+		{{#if html}}
+		<div class="members-teaser global-mask">
+			{{{html}}}
+		</div>
+		{{/if}}
+		{{>members/cta}}
+		{{/if}}
+	</div>
+</article>
+{{^is "page"}}
+{{>post_nextprev}}
+{{#if access}}
+<div class="comments-section">
+	<div class="comments-wrap">
+		{{#if @custom.disqus_shortname}}
+		{{>services/disqus}}
+		{{else if comments}}
+		{{comments title=(t "Member discussion") mode="auto"}}
+		{{/if}}
+	</div>
+</div>
+{{/if}}
+{{>post_related}}
+{{/is}}
