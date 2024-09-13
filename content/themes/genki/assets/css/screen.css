@@ -5511,19 +5511,6 @@ small.global-question a:hover {
    flex:auto !important;
 }
 
-[class*="needsclick go1878581180 kl-private-reset-css-Xuajs1"] {
-   width:160px !important;
-}
-
-
-
-
-
-@media (max-width:1024px) {[class*="kl-private-reset-css-Xuajs1"], 
-[class*="go3954790966"]::placeholder {
-   font-size: 16px !important;
-   max-width:325px !important;
-}}
 
 
 
